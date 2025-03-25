@@ -123,7 +123,7 @@ video {
     background: #6567C9;
     color: white;
     border-radius: 50px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.25);
     font-size: 16px;
     font-weight: 600;
     display: flex;
@@ -143,7 +143,7 @@ video {
 
 .x-button:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 8px #CAD3DE;
+    box-shadow: 0px 0px 8px #ffffff;
 }
 
 .x-gradient-font {
@@ -154,7 +154,7 @@ video {
 }
 
 .x-gradient-block {
-    color: #3f3f3f;
+    color: #131313;
     background: #e6f4f9;
     border-radius: 16px;
 }
@@ -218,7 +218,7 @@ video {
 }
 
 .x-card.clickable:hover {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
     transform: scale(1.02);
 }
 
@@ -369,9 +369,9 @@ video {
     color: white;
     font-size: 16px;
     font-weight: 500;
-    background: #45505B;
+    background: #7d6fb4;
     border-radius: 50px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,7 +382,7 @@ video {
     width: 105px;
     height: 21px;
     font-size: 17px;
-    box-shadow: 0px 0px 6px #8661c5;
+    box-shadow: 0px 0px 0px #8661c5;
 }
 
 #links a.disabled {
@@ -525,7 +525,7 @@ video {
     height: 50px;
     width: 80%;
     padding: 0px 10%;
-    background:  #ADA9B4;
+    background:  #7d6fb4;
     display: flex;
     align-items: center;
     justify-content: space-between;
