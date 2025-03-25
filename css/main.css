@@ -72,7 +72,8 @@ video {
 
 .x-center-text {
     margin: 16px 32px;
-    text-align: center;
+    text-align: justify;
+
 }
 
 .x-left-align {

@@ -42,7 +42,9 @@
                 <div><a id="code" href="./coming-soon.html">Code</a></div>
             </div>
             <div id="teaser">
-                <div style="width: 100%;"><video autoplay playsinline loop muted src="assets/teaser.mp4" poster="assets/teaser.jpg"></video></div>
+                <div style="width: 100%; display: flex; justify-content: center; align-items: top; height: 400px;">
+                    <img src="assets/teaser.png" alt="Teaser Image" style="width: 80%; height: auto;">
+                </div>
             </div>
             <div class="x-center-text" style="font-size: 20px; font-weight: 500; color: #3f3f3f;">
                 <b>TL;DR:</b> A unified 3D scene representation method that learns rich scene graph node embeddings, enabling efficient 3D scene reconstruction and direct application in other downstream tasks.
@@ -54,14 +56,31 @@
                 In this work, we introduce a novel method Graph2Splat to learn rich scene graph node embeddings, enabling both efficient 3D scene reconstruction and direct application in other downstream tasks. Graph2Splat predicts a 3D Gaussian Splat (3DGS) representation for each object from its embedding, capturing both appearance and geometry. Evaluated on two real-world datasets, Graph2Splat achieves high-fidelity novel view synthesis comparable to direct 3DGS reconstruction, while significantly improving geometric accuracy. Importantly, it needs 3-4 orders of magnitude less storage than other approaches, making it a practical and versatile solution for scene representation.
             </div>
             <div class="x-section-title"><div class="x-gradient-font">Reconstruction</div></div>
-            <p>
-               ...
-            </p>
+            <div class="x-center">
+                <img src="assets/method.png" alt="Overview of the proposed pipeline" style="max-width: 100%; height: auto;">
+                <p class="x-center-text">
+                    Overview of the proposed pipeline which learns object embeddings to reconstruct 3D Gaussians and support downstream tasks such as visual localization.  (a) The method takes a mesh or point cloud of an object along with posed images observing it. The canonical object space is voxelized based on object geometry, and DINOv2 features extracted from the images are assigned to each voxel.
+                    This produces a 64 x 64 x 64 x 8 structured latent (SLat) representation. (b) The SLat is further compressed into a 16 x 16 x 16 x 8 U-3DGS embedding using a 3D U-Net. The embedding is trained with a masked mean squared error loss to ensure accurate reconstruction of the SLat, which in turn enables decoding into 3D Gaussians using standard photometric losses. (c) Additional task-specific losses, such as those for visual localization, can be incorporated to optimize the embedding for multiple objectives.
+                </p>
+            </div>
+            
             <div class="x-section-title"><div class="x-gradient-font">Downstream Tasks</div></div>
-            <p>
-                ...
-               
-            </p>
+            <div class="x-center">
+                <div style="display: flex; justify-content: center;">
+                    <img src="assets/other_task.png" alt="Downstream tasks enabled by Graph2Splat" style="max-width: 80%; height: auto;">
+                </div>
+                <p class="x-center-text">
+                    <!-- Learning downstream tasks with U-3DGS embeddings.
+                    (a) Multimodal Latent Encoding: Each modality from the 3D scene graph—\textit{relationships}, \textit{structure}, \textit{attributes}, \textit{structured latent}—is encoded individually and combined into a structured latent representation. This embedding captures spatial, semantic, and relational properties of each object.
+                    (b) Patch Encoding \cite{miao2024scenegraphloccrossmodalcoarsevisual}: A posed RGB image is encoded using a pretrained DINOv2 backbone followed by a patch-level encoder, producing image patch embeddings that align with object-level multimodal embedding embeddings.
+                    (c) U-3DGS Latent Decoding: The structured latent embedding - is used to decode a 3D Gaussian Splat representation. A contrastive loss aligns image patches with their corresponding object embeddings, while a compression loss ensures the latent remains reconstructable. Together, this enables the U-3DGS embedding to support both downstream tasks (e.g., visual localization) and high-fidelity 3D reconstruction. -->
+                    Learning downstream tasks with U-3DGS embeddings.
+                    (a) Multimodal Latent Encoding: Each modality from the 3D scene graph -relationships, structure, attributes, structured latent- is encoded individually and combined into a structured latent representation. This embedding captures spatial, semantic, and relational properties of each object.
+                    (b) Patch Encoding: A posed RGB image is encoded using a pretrained DINOv2 backbone followed by a patch-level encoder, producing image patch embeddings that align with object-level multimodal embeddings.
+                    (c) U-3DGS Latent Decoding: The structured latent embedding is used to decode a 3D Gaussian Splat representation. A contrastive loss aligns image patches with their corresponding object embeddings, while a compression loss ensures the latent remains reconstructable. Together, this enables the U-3DGS embedding to support both downstream tasks (e.g., visual localization) and high-fidelity 3D reconstruction.
+                    
+                </p>
+            </div>
             <div class="x-section-title"><div class="x-gradient-font">Scene Composition</div></div>
             <p>
                 ...
