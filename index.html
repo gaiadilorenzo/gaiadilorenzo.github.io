@@ -42,8 +42,8 @@
                 <div><a id="code" href="./coming-soon.html">Code</a></div>
             </div>
             <div id="teaser">
-                <div style="width: 100%; display: flex; justify-content: center; align-items: top; height: 400px;">
-                    <img src="assets/teaser.png" alt="Teaser Image" style="width: 80%; height: auto;">
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <img src="assets/teaser.png" alt="Teaser Image" style="width: 90%; height: auto;">
                 </div>
             </div>
             <div class="x-center-text" style="font-size: 20px; font-weight: 500; color: #3f3f3f;">
@@ -57,7 +57,9 @@
             </div>
             <div class="x-section-title"><div class="x-gradient-font">Reconstruction</div></div>
             <div class="x-center">
-                <img src="assets/method.png" alt="Overview of the proposed pipeline" style="max-width: 100%; height: auto;">
+                <div style="display: flex; justify-content: center;">
+                    <img src="assets/method.png" alt="Overview of the proposed pipeline" style="max-width: 80%; height: auto;">
+                </div>
                 <p class="x-center-text">
                     Overview of the proposed pipeline which learns object embeddings to reconstruct 3D Gaussians and support downstream tasks such as visual localization.  (a) The method takes a mesh or point cloud of an object along with posed images observing it. The canonical object space is voxelized based on object geometry, and DINOv2 features extracted from the images are assigned to each voxel.
                     This produces a 64 x 64 x 64 x 8 structured latent (SLat) representation. (b) The SLat is further compressed into a 16 x 16 x 16 x 8 U-3DGS embedding using a 3D U-Net. The embedding is trained with a masked mean squared error loss to ensure accurate reconstruction of the SLat, which in turn enables decoding into 3D Gaussians using standard photometric losses. (c) Additional task-specific losses, such as those for visual localization, can be incorporated to optimize the embedding for multiple objectives.
@@ -81,14 +83,23 @@
                     
                 </p>
             </div>
-            <div class="x-section-title"><div class="x-gradient-font">Scene Composition</div></div>
-            <p>
-                ...
-               
-            </p>
             <div id="results-variants"></div>
 
-        
+            <div class="x-section-title"><div class="x-gradient
+            -font">Results</div></div>
+            <div class="x-center">
+
+                <div style="display: flex; justify-content: center;">
+                                    
+                    <!-- Rotated labels -->
+                    <div style="display: flex; flex-direction: column; justify-content: center; margin-right: -80px;">
+                        <div id="title" style="transform: rotate(180deg); writing-mode: vertical-lr;  margin-top: 50px; font-size: 16px;">3DGS</div>
+                        <div id="title" style="transform: rotate(180deg); writing-mode: vertical-lr; margin-top: 50px; font-size: 16px;">Graph2Splat</div>
+                    </div>
+                    <div style="width: 100%;"><video autoplay playsinline loop muted src="assets/samples_inverted.mp4"></video></div>
+                </div>
+            </div>
+
         <div class="x-section-title"><div class="x-gradient-font">Citation</div></div>
         <p>
             If you find our work useful, please consider citing:
