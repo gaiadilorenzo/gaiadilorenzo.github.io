@@ -24,7 +24,7 @@ while cap.isOpened():
 
     # Invert black to white
     # Create a mask for black pixels
-    black_mask = cv2.inRange(frame, (0, 0, 0), (35, 35, 35))  # Adjust threshold as needed
+    black_mask = cv2.inRange(frame, (0, 0, 0), (15, 15, 15))  # Adjust threshold as needed
     
     # Invert only the black pixels
     inverted_frame = frame.copy()
