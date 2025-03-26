@@ -21,7 +21,7 @@
 }
 
 a {
-    color: #7d6fb4;
+    color: #1b82d6;
     text-decoration: none;
 }
   
@@ -121,7 +121,7 @@ video {
 .x-button {
     height: 40px;
     padding: 0px 14px;
-    background: #6567C9;
+    background: #919199;
     color: white;
     border-radius: 50px;
     box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.25);
@@ -155,9 +155,9 @@ video {
 }
 
 .x-gradient-block {
-    color: #131313;
-    background: #e6f4f9;
-    border-radius: 16px;
+    color: #4a4a4a;
+    background: #f9f9f9;
+    border-radius: 20px;
 }
 
 .x-gradient-border {
@@ -370,7 +370,7 @@ video {
     color: white;
     font-size: 16px;
     font-weight: 500;
-    background: #7d6fb4;
+    background: #4a4a4a;
     border-radius: 50px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -383,7 +383,7 @@ video {
     width: 105px;
     height: 21px;
     font-size: 17px;
-    box-shadow: 0px 0px 0px #8661c5;
+    box-shadow: 0px 0px 0px #000000;
 }
 
 #links a.disabled {
@@ -523,10 +523,10 @@ video {
 #bottombar {
     position: absolute;
     bottom: 0px;
-    height: 50px;
+    height: 100px;
     width: 80%;
     padding: 0px 10%;
-    background:  #7d6fb4;
+    background:  #efefef;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -534,7 +534,7 @@ video {
 }
 
 #bottombar div {
-    color: rgba(255, 255, 255, 0.7);
+    color: #4a4a4a;
     font-size: 12px;
     font-weight: 500;
 }
