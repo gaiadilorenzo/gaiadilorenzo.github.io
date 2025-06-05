@@ -23,8 +23,8 @@
     <body>
         <div id="main">
             <div id="title">
-                <span style="font-size: 60px;">Graph2Splat</span><br>
-                <span style="font-size: 28px;">Learning 3D Gaussian Splats from Scene Graph Embeddings</span>
+                <span style="font-size: 60px;">Object-X</span><br>
+                <span style="font-size: 28px;">Learning to Reconstruct Multi-Modal 3D Object Representations</span>
             </div>
             <div id="authors">
                 <div><a class="link" href="https://www.linkedin.com/in/gaia-di-lorenzo/">Gaia Di Lorenzo</a><sup>1</sup></div>
@@ -66,18 +66,10 @@
             <div class="x-section-title"><div class="x-gradient-font">Downstream Tasks</div></div>
             <div class="x-center">
                 <div style="display: flex; justify-content: center;">
-                    <img src="assets/other_task.png" alt="Downstream tasks enabled by Graph2Splat" style="max-width: 80%; height: auto;">
+                    <img src="assets/other_task.png" alt="Downstream tasks enabled by Object-X" style="max-width: 80%; height: auto;">
                 </div>
                 <p class="x-center-text">
-                    <!-- Learning downstream tasks with U-3DGS embeddings.
-                    (a) Multimodal Latent Encoding: Each modality from the 3D scene graph—\textit{relationships}, \textit{structure}, \textit{attributes}, \textit{structured latent}—is encoded individually and combined into a structured latent representation. This embedding captures spatial, semantic, and relational properties of each object.
-                    (b) Patch Encoding \cite{miao2024scenegraphloccrossmodalcoarsevisual}: A posed RGB image is encoded using a pretrained DINOv2 backbone followed by a patch-level encoder, producing image patch embeddings that align with object-level multimodal embedding embeddings.
-                    (c) U-3DGS Latent Decoding: The structured latent embedding - is used to decode a 3D Gaussian Splat representation. A contrastive loss aligns image patches with their corresponding object embeddings, while a compression loss ensures the latent remains reconstructable. Together, this enables the U-3DGS embedding to support both downstream tasks (e.g., visual localization) and high-fidelity 3D reconstruction. -->
-                    Learning downstream tasks with U-3DGS embeddings.
-                    (a) Multimodal Latent Encoding: Each modality from the 3D scene graph -relationships, structure, attributes, structured latent- is encoded individually and combined into a structured latent representation. This embedding captures spatial, semantic, and relational properties of each object.
-                    (b) Patch Encoding: A posed RGB image is encoded using a pretrained DINOv2 backbone followed by a patch-level encoder, producing image patch embeddings that align with object-level multimodal embeddings.
-                    (c) U-3DGS Latent Decoding: The structured latent embedding is used to decode a 3D Gaussian Splat representation. A contrastive loss aligns image patches with their corresponding object embeddings, while a compression loss ensures the latent remains reconstructable. Together, this enables the U-3DGS embedding to support both downstream tasks (e.g., visual localization) and high-fidelity 3D reconstruction.
-                    
+                    The proposed Object-X learns per-object embeddings that are beneficial for a number of downstream tasks, besides object-wise 3DGS reconstruction, such as cross-modal visual localization (via image-to-object matching), 3D scene aligment (via object-to-object matching), and full-scene reconstruction by integrating per-object Gaussians primitives.
                 </p>
             </div>
             <div id="results-variants"></div>
@@ -91,14 +83,14 @@
                     <!-- Rotated labels -->
                     <div style="display: flex; flex-direction: column; justify-content: center; margin-right: -30px;">
                         <div id="title" style="transform: rotate(180deg); writing-mode: vertical-lr;  margin-top: 50px; font-size: 16px;">3DGS</div>
-                        <div id="title" style="transform: rotate(180deg); writing-mode: vertical-lr; margin-top: 50px; font-size: 16px;">Graph2Splat</div>
+                        <div id="title" style="transform: rotate(180deg); writing-mode: vertical-lr; margin-top: 50px; font-size: 16px;">Object-X</div>
                     </div>
                     <div style="width: 90%;"><video autoplay playsinline loop muted src="assets/samples_inverted.mp4"></video></div>
                     
                 </div>
                 <p class="x-center-text">
-                    We show qualitative comparison between 3DGS optimized on all images from the dataset - on the top -  and Graph2Splat - on the bottom - on few objects. 
-                    We show Graph2Splat can reconstruct the object with comparable visual quality to 3DGS, while significantly improving the geometric accuracy.
+                    We show qualitative comparison between 3DGS optimized on all images from the dataset - on the top -  and Object-X - on the bottom - on few objects. 
+                    We show Object-X can reconstruct the object with comparable visual quality to 3DGS, while significantly improving the geometric accuracy.
                 </p>
                     
             </div>
@@ -112,7 +104,7 @@
         </p>
         </div>
         <div id="bottombar">
-            <div>Graph2Splat: Learning 3D Gaussian Splats from Scene Graph Embeddings</div>
+            <div>Object-X: Learning 3D Gaussian Splats from Scene Graph Embeddings</div>
             <div>Template designed by <span>Gaia Di Lorenzo</span>.</div>
         </div>
     </body>
