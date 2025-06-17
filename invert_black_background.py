@@ -1,9 +1,10 @@
 import cv2
 import numpy as np
 
+print("Inverting")
 # Path to the input video
-input_path = "/home/gdilorenzo/scene_graph_recon/gaiadilorenzo.github.io/assets/samples.mp4"
-output_path = "/home/gdilorenzo/scene_graph_recon/gaiadilorenzo.github.io/assets/samples_inverted.mp4"
+input_path = "assets/samples.mp4"
+output_path = "assets/samples_inverted.mp4"
 
 # Open the video file
 cap = cv2.VideoCapture(input_path)
@@ -29,6 +30,7 @@ while cap.isOpened():
     # Invert only the black pixels
     inverted_frame = frame.copy()
     inverted_frame[black_mask > 0] = 255 - inverted_frame[black_mask > 0]
+    print("Inverted frame")
     # Write the frame to the output video
     out.write(inverted_frame)
 
